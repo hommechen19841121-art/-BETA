@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Noto Serif SC", "Playfair Display", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", "Noto Sans SC", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --color-canvas: #F7F6F2;
+  --color-surface: #FFFFFF;
+  --color-surface-subtle: #F2F0EA;
+  --color-ink: #141E2B;
+  --color-ink-secondary: #475569;
+  --color-ink-muted: #64748B;
+  --color-hairline: #E4E1DA;
+  --color-accent: #1B365D;
+  --color-accent-hover: #132847;
+  --color-safe: #166534;
+  --color-warn: #B45309;
+  --color-danger: #B91C1C;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background-color: var(--color-canvas);
+    color: var(--color-ink);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  h1, h2, h3, .font-editorial {
+    font-family: var(--font-serif);
+    text-wrap: balance;
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]) {
+    cursor: pointer;
+  }
+}
+
+/* Subtle range slider styling matching institutional research aesthetic */
+input[type="range"].editorial-range {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  background: #DFDCD4;
+  border-radius: 2px;
+  outline: none;
+}
+
+input[type="range"].editorial-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 9999px;
+  background: #1B365D;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 1px 3px rgba(20, 30, 43, 0.25);
+  cursor: pointer;
+  transition: transform 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+input[type="range"].editorial-range::-webkit-slider-thumb:hover {
+  transform: scale(1.12);
+}
+
+input[type="range"].editorial-range::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 9999px;
+  background: #1B365D;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 1px 3px rgba(20, 30, 43, 0.25);
+  cursor: pointer;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "经纬研策 · 涉外投融与国资企管顾问工作台",
+  "description": "面向外贸与跨境投资企业的资深企管风控顾问工作台，涵盖国资四级公司资产盘活推演沙盘、交互式AI专题诊断、轻资产模式对比矩阵与国企/民营涉外合规自检库。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
